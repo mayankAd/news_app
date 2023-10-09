@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Weather from "./components/Weather/Weather";
+import News from "./components/News/News";
+import { createContext, useState } from "react";
+
+
+export const NewsContext = createContext(null);
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  
+const[search, setSearch] = useState("India")
+  
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <NewsContext.Provider value = {{search, setSearch}}>
+      <div className="flex h-[100vh] bg-black w-[100%]">
+        
+        <Weather/>
+        <News/>
+        
+        
+        
+        
+        
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      </NewsContext.Provider>
+  );
 }
 
-export default App
+export default App;

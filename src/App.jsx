@@ -15,7 +15,7 @@ const[search, setSearch] = useState("India")
 
   return (
     <NewsContext.Provider value = {{search, setSearch}}>
-      <div className="flex h-[100vh] bg-black w-[100%]">
+      <div className="flex h-[100vh] w-[100%]">
         
         <Weather/>
         <News/>

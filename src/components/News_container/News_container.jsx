@@ -30,12 +30,12 @@ const News_container = () => {
     console.log(data.articles)
   }
   return (
-    <div className='pt-[200px] pl-20 flex flex-wrap w-[100%] h-[100%] gap-10'>
+    <div className=' pt-[200px] pl-20 flex flex-wrap w-[100%] h-[100%] gap-10'>
         {
           news.map((dat)=>{
             return(
               <div key={dat.title}>
-              <News_card imglink = {dat.urlToImage} title={dat.title} description = {dat.description}/>
+              <News_card imglink = {dat.urlToImage} title={dat.title} description = {dat.description} url = {dat.url}/>
               </div>
             )
           })

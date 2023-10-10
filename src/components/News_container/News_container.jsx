@@ -12,8 +12,8 @@ const News_container = () => {
   const [news, setNews] = useState();
 
 
-  const API_KEY = "612a3dacd56243068753ebb5ff3458bf";
-  const url = "https://newsapi.org/v2/everything?q=";
+  const API_KEY = "pub_30909bd462afa673603ff5fe711bde08ce975";
+  const url = "https://newsdata.io/api/1/news?";
 
   useEffect(()=>{
     fetchNews("India")
@@ -24,20 +24,33 @@ const News_container = () => {
   },[data.search])
 
   const fetchNews= async(query)=>{
-    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`)
+    const res = await fetch(`${url}apiKey=${API_KEY}&q=${query}`)
     const data = await res.json();
-    setNews(data.articles);
+    const filteredData = data.results.filter(item=>{
+      return item.image_url!= null
+    })
+    setNews(filteredData);
     
   }
+
+  
+  
+
+
+
+
   return (
     <div className=' pt-[200px] pl-20 flex flex-wrap w-[100%] h-[100%] gap-10'>
         {
+          
           news?.map((dat)=>{
+            {
             return(
               <div key={dat.title}>
-              <News_card imglink = {dat.urlToImage} title={dat.title} description = {dat.description} url = {dat.url}/>
+              <News_card imglink = {dat.image_url} title={dat.title} description = {dat.description} url = {dat.link}/>
               </div>
             )
+            }
           })
         }
     </div>

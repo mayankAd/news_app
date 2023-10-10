@@ -23,7 +23,6 @@ const Weather = () => {
     setFeelsLike(data.feels_like)
     setWindSpeed(data.wind_speed)
     setCityName(city)
-    console.log(data)
   },[data])
   
 

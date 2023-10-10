@@ -52,21 +52,21 @@ const Weather = () => {
 
 
   return (
-    <div className='bg-slate-500 w-[200px] h-[100%] md:w-[400px] fixed flex flex-col items-center border-2 border-black'>
-      <div className='bg-black w-[100%] flex justify-center h-[20%] items-center'>
+    <div className='bg-slate-500 w-[200px] h-[100%] md:w-[350px] fixed flex flex-col items-center border-2 border-gray-700 border-t-0'>
+      <div className='bg-gray-700 w-[100%] flex justify-center h-[100px] items-center'>
       <div className='w-[30%]'>
         <img src="News.png" alt="" />
       </div>
       </div>
       <div className='flex flex-col w-[100%]'>
         
-      <div className='flex flex-col border-black border-t-2 border-b-2 bg-blue-100 w-[100%] pl-6 pt-12 pb-10 text-gray font-bold text-3xl gap-8'>
+      <div className='flex flex-col border-black border-b-2 bg-blue-100 w-[100%] pl-6 pt-12 pb-10 text-gray font-bold text-3xl gap-8'>
         <div className='flex pl-6'><h1 className='flex justify-center text-black rounded-lg font-bold text-[20px] border-2 bg-white ps-4 pe-4 md:text-[25px]'>{cityName}</h1></div>
       
-          <h3 className='flex pt-4 text-[20px] md:text-[30px]'>Temperature : <p className='text-blue-700'>{temp}</p></h3>
-          <h3 className='flex text-[20px] md:text-[30px]'>Feels like : <p className='text-blue-700'>{feelsLike}</p></h3>
-          <h3 className='flex text-[20px] md:text-[30px]'>Humidity : <p className='text-blue-700'>{humidity}</p></h3>
-          <h3 className='flex text-[20px] md:text-[30px]'>Wind speed : <p className='text-blue-700'>{windSpeed}</p></h3>
+          <h3 className='flex pt-4 text-[20px] md:text-[25px]'>Temperature is_<p className='text-blue-700'>{temp}</p><p>°</p></h3>
+          <h3 className='flex text-[20px] md:text-[25px]'>Feels like_  <p className='text-blue-700'>{feelsLike}</p><p>°</p></h3>
+          <h3 className='flex text-[20px] md:text-[25px]'>Humidity is_<p className='text-blue-700'>{humidity}</p></h3>
+          <h3 className='flex text-[20px] md:text-[25px]'>Wind speed is_<p className='text-blue-700'>{windSpeed}</p></h3>
       </div>
       <div className='flex flex-col items-center gap-10 '>
         <p className='text-xl text-white pt-10'>Search your city</p>

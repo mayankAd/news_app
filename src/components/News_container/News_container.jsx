@@ -16,7 +16,7 @@ const News_container = () => {
   const url = "https://newsdata.io/api/1/news?";
 
   useEffect(()=>{
-    fetchNews("India")
+    fetchNews("Cricket")
   },[])
 
   useEffect(()=>{
@@ -40,7 +40,7 @@ const News_container = () => {
 
 
   return (
-    <div className=' pt-[200px] pl-20 flex flex-wrap w-[100%] h-[100%] gap-10'>
+    <div className=' pt-[200px] pl-[100px] flex flex-wrap w-[100%] h-[100%] gap-10'>
         {
           
           news?.map((dat)=>{

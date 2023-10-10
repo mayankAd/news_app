@@ -10,7 +10,7 @@ import { NewsContext } from '../../App'
 
 const Navbar = () => {
 
-  const[val, setVal] = useState("india")
+  const[val, setVal] = useState("ipl")
 
   const data = useContext(NewsContext)
 
@@ -21,7 +21,7 @@ const Navbar = () => {
 
 
   return (
-    <div className='flex gap-4 justify-between h-[100px] bg-gray-700 text-white items-end pl-4 pb-2 pr-20 fixed md:w-[calc(100%-400px)]'>
+    <div className='flex gap-4 justify-between h-[100px] bg-gray-700 text-white items-end pl-4 pb-2 pr-20 fixed md:w-[calc(100%-350px)]'>
         
         <div className='hidden md:flex'>
             <ul className='pl-6  flex md:flex-col  md:gap-1 gap-[5vw] lg:flex-row lg:gap-14 font-bold text-xl'>

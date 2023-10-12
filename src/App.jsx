@@ -4,6 +4,8 @@ import News from "./components/News/News";
 import { createContext, useState } from "react";
 
 
+
+
 export const NewsContext = createContext(null);
 
 function App() {

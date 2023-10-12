@@ -86,7 +86,7 @@ const Weather = () => {
           <p className="text-xl text-white pt-10">Search your city</p>
           <div className="flex gap-3 flex-wrap justify-center">
             <input
-              className="pl-2 h-10 border-black border rounded-lg"
+              className="pl-2 h-10 border-black border rounded-lg w-[150px]"
               type="text"
               name=""
               id=""

@@ -40,7 +40,7 @@ const News_container = () => {
 
 
   return (
-    <div className=' pt-[200px] justify-center pl-4 flex flex-wrap w-[100%] h-[100%] gap-10'>
+    <div className=' pt-[200px] justify-center pl-[90px] sm:pl-6 flex flex-wrap w-[100%] h-[100%] gap-10'>
         {
           
           news?.map((dat)=>{
